@@ -786,7 +786,7 @@ with gr.Blocks(title="GPT-SoVITS WebUI") as app:
             with gr.Row():
                 with gr.Column(scale=3):
                     with gr.Row():
-                        slice_inp_path=gr.Textbox(label=i18n("音频自动切分输入路径，可文件可文件夹"),value="")
+                        slice_inp_path=gr.Textbox(label=i18n("音频自动切分输入路径，可文件可文件夹"),value="audio_input/miles.m4a")
                         slice_opt_root=gr.Textbox(label=i18n("切分后的子音频的输出根目录"),value="output/slicer_opt")
                     with gr.Row():
                         threshold=gr.Textbox(label=i18n("threshold:音量小于这个值视作静音的备选切割点"),value="-34")
@@ -885,7 +885,7 @@ with gr.Blocks(title="GPT-SoVITS WebUI") as app:
                     with gr.Row():
                         path_list = gr.Textbox(
                         label=i18n(".list标注文件的路径"),
-                        value="D:\\RVC1006\\GPT-SoVITS\\raw\\xxx.list",
+                        value="raw\\miles.list",
                         interactive=True,
                     )
                         label_info = gr.Textbox(label=i18n("打标工具进程输出信息"))
@@ -911,7 +911,7 @@ with gr.Blocks(title="GPT-SoVITS WebUI") as app:
                 gr.Markdown(value=i18n("输出logs/实验名目录下应有23456开头的文件和文件夹"))
                 with gr.Row():
                     with gr.Row():
-                        inp_text = gr.Textbox(label=i18n("*文本标注文件"),value=r"D:\RVC1006\GPT-SoVITS\raw\xxx.list",interactive=True,scale=10)
+                        inp_text = gr.Textbox(label=i18n("*文本标注文件"),value=r"raw\miles.list",interactive=True,scale=10)
                     with gr.Row():
                         inp_wav_dir = gr.Textbox(
                             label=i18n("*训练集音频文件目录"),
